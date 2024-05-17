@@ -44,3 +44,13 @@ export function useDateTime() {
 
   return formatedDateTime
 }
+
+export const weatherInEnglish = () => [
+  'atmosphere',
+  'clear',
+  'clouds',
+  'drizzle',
+  'rain',
+  'snow',
+  'thunderstorm',
+]

@@ -19,7 +19,7 @@ const store = useWeatherStore()
           <MoreLocations v-for="location, index in store.$state.moreLocations" :key="index" :location="location" />
         </div>
 
-        <span class="mt-10 border-b border-b-gray-500" />
+        <span class="mt-10 border-b border-b-zinc-200" />
       </div>
     </div>
 
@@ -31,7 +31,7 @@ const store = useWeatherStore()
           <WeatherDetails />
         </div>
     
-        <span class="mt-10 border-b border-b-gray-500" />
+        <span class="mt-10 border-b border-b-zinc-200" />
       </div>
     </div>
 

@@ -49,7 +49,7 @@ async function onSubmit() {
     <input 
       type="text" 
       class="absolute left-12 w-2/3 bottom-0 bg-transparent border-b focus-visible:outline-none" 
-      :class="[error ? 'border-b-red-800' : 'border-b-gray-500']"
+      :class="[error ? 'border-b-red-800' : 'border-b-zinc-200']"
       placeholder="Outra cidade"
       minlength="3"
       maxlength="100"
@@ -59,10 +59,10 @@ async function onSubmit() {
     >
     <button 
       type="submit" 
-      class="absolute right-0 top-0 h-20 w-20 bg-orange-500 flex items-center justify-center "
+      class="absolute right-0 top-0 h-20 w-20 bg-zinc-800 flex items-center justify-center "
       title="Pesquisar"
     >
-      <Search  stroke-width="2" color="black" :size="32" />
+      <Search  stroke-width="2" color="#e4e4e7" :size="32" />
     </button>
     <span class="absolute left-12 -bottom-6 text-sm text-red-700 font-semibold" v-if="error">Cidade não foi encontrada</span>
   </form>

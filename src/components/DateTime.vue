@@ -25,5 +25,5 @@ const date = computed(() => dateTime.value.date);
 </script>
 
 <template>
-  <span class="text-sm">{{ time }} - {{ day }}, {{ date }}</span>
+  <span class="text-sm text-white">{{ time }} - {{ day }}, {{ date }}</span>
 </template>

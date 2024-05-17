@@ -2,6 +2,19 @@
 import { computed } from "vue";
 import { useWeatherStore } from "@/stores/weather";
 import DateTime from "@/components/DateTime.vue";
+import { weatherInEnglish } from "@/composables/utils";
+
+const weatherInBR = [
+  'Atmosferico',
+  'Limpo',
+  'Nublado',
+  'Chuviscos',
+  'Chuvoso',
+  'Nevando',
+  'Tempestade'
+]
+
+const weatherInEn = weatherInEnglish();
 
 const store = useWeatherStore(); 
 
@@ -14,7 +27,8 @@ const temperature = computed(() => {
 })
 
 const weather = computed(() => {
-  return store.$state.weatherStoreInfo?.weather[0]?.main ? store.$state.weatherStoreInfo.weather[0].main : ''
+  const index = store.$state.weatherStoreInfo?.weather[0]?.main ? weatherInEn.indexOf(store.$state.weatherStoreInfo?.weather[0]?.main.toLowerCase()) : -1;
+  return index !== -1 ? weatherInBR[index] : ''
 })
 
 const icon = computed(() => {
