@@ -1,29 +1,21 @@
-// const api = {
-//   key: "",
-//   base_url: "",
-//   lang: "",
-//   units: "",
-//   mode: "",
-//   lat: "",
-//   long: "",
-// }
+interface getWeatherInfoInterface {
+  city: string;
+  countryCode?: string;
+}
 
-export default async function getWeatherInfo() {
+const appID = import.meta.env.VITE_API_KEY;
+
+export default async function getWeatherInfo({ city, countryCode }: getWeatherInfoInterface) {
   try {
     const response = await fetch(
-      'https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=98600db9d000e125791110f5a36c7106'
+      `https://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&APPID=${appID}&units=metric`
     )
       .then((response) => response.json())
 
     return response
-    
   } catch (error) {
     console.error(error)
   }
 }
 
-/* Docs = {
-  https://openweathermap.org/current#one
-  Current weather data: https://openweathermap.org/current#one
-  https://openweathermap.org/api/geocoding-api
-*/
+
