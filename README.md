@@ -1,40 +1,24 @@
-# vue-weather-api
+# Vue + TypeScript + Vite
 
-This template should help get you started developing with Vue 3 in Vite.
+### 🚀 Check the weather on your city or your friends cities
 
-## Recommended IDE Setup
+### 🧐 Summary
+• This project aims to simulate a weather checker
+• Some points to highlight:
+  • Initial search by browser location
+  • Search by city
+  • Using localstorage and state management
+  • Mobile Layout and Desktop Layout
+  • Using routes
+  • Load component usage
+  • And more...
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
-
+### 🛠️ Tech stack
+• This project was created with Vite 
+• Vue Composition API + Setup + Typescript 
+• Pinia to state management 
+• Local Storage 
+• TailwindCSS 
+• Vue router 
+• Composable 
+• Services on fetch openweathermap API

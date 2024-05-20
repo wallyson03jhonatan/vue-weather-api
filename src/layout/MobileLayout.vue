@@ -3,7 +3,6 @@ import { computed } from "vue";
 import { useWeatherStore } from "@/stores/weather";
 import { weatherInEnglish } from "@/composables/utils";
 import LoadingCard from "@/layout/LoadingCard.vue";
-import DateTime from "@/components/DateTime.vue";
 import WidgetInfo from "@/components/WidgetInfo.vue";
 import WeatherDetails from "@/components/WeatherDetails.vue";
 import LocationForm from "@/components/LocationForm.vue";
