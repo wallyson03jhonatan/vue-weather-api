@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { useDateTime } from "@/composables/utils";
+import { useMobileStore } from "@/stores/mobile";
 
 interface dateTimeInterface {
   day?: string;
   time?: string;
   date?: string;
 }
+
+const store = useMobileStore();
 
 const dateTime = ref<dateTimeInterface>({});
 const { value } = useDateTime();
@@ -25,5 +28,10 @@ const date = computed(() => dateTime.value.date);
 </script>
 
 <template>
-  <span class="text-sm text-white">{{ time }} - {{ day }}, {{ date }}</span>
+  <div v-if="store.$state.isMobile" class="flex flex-col items-center justify-center">
+    <span class="text-sm text-white">{{ time }}</span>
+    <span class="text-sm text-white">{{ day }}, {{ date }}</span>
+  </div>
+  
+  <span v-else class="text-sm text-white">{{ time }} - {{ day }}, {{ date }}</span>
 </template>

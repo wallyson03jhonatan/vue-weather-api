@@ -23,6 +23,10 @@ body {
   font-family: Inter, 'Segoe UI', Roboto, sans-serif;
 }
 
+img {
+  min-width: 100px;
+}
+
 .fix-height {
   height: calc(100vh - 10rem);
 }

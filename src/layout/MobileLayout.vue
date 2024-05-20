@@ -2,9 +2,11 @@
 import { computed } from "vue";
 import { useWeatherStore } from "@/stores/weather";
 import { weatherInEnglish } from "@/composables/utils";
-import AsideInfo from "@/components/AsideInfo.vue";
-import WidgetInfo from "@/components/WidgetInfo.vue";
 import LoadingCard from "@/layout/LoadingCard.vue";
+import DateTime from "@/components/DateTime.vue";
+import WidgetInfo from "@/components/WidgetInfo.vue";
+import WeatherDetails from "@/components/WeatherDetails.vue";
+import LocationForm from "@/components/LocationForm.vue";
 
 const store = useWeatherStore();
 
@@ -29,13 +31,23 @@ const loading = computed(() => {
     </template>
 
     <template v-else>
-      <span class="absolute top-16 left-12 text-white text-sm font-bold font-serif z-10">the.vue.weather</span>
 
       <img :src="imageUrl" alt="Imagem do clima" class="h-full">
 
-      <WidgetInfo />
+      <div
+        class="absolute left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center justify-center w-full h-full">
 
-      <AsideInfo />
+        <LocationForm />
+
+        <WidgetInfo />
+
+        <div class="glass-effect p-4 w-4/5 rounded-md mt-8">
+          <WeatherDetails />
+        </div>
+
+        <span class="text-white text-sm font-bold font-serif text-center mt-16">the.vue.weather</span>
+
+      </div>
     </template>
 
   </main>
