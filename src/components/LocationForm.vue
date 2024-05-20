@@ -11,7 +11,7 @@ const error = ref<boolean>(false);
 
 async function onSubmit() {
   const getCountry = await getGeoCoding({ city: city.value });
-  
+
   if (getCountry.length === 0) {
     error.value = true;
     city.value = '';

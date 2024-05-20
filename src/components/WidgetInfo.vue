@@ -40,7 +40,7 @@ const icon = computed(() => {
 
 <template>
   <div class="absolute bottom-16 left-12">
-    <div class="flex items-end gap-4">
+    <div class="flex items-end gap-6">
       <span class="text-7xl text-white font-semibold" v-show="temperature">{{ temperature }}°</span>
 
       <div class="flex flex-col">
@@ -48,8 +48,8 @@ const icon = computed(() => {
         <DateTime />
       </div>
 
-      <div class="flex flex-col">
-        <img :src="icon" alt="Icon" height="100" width="100" class="absolute -right-8 -bottom-2">
+      <div class="relative flex flex-col items-center">
+        <img :src="icon" alt="Icon" class="absolute bottom-2">
         <span class="text-sm text-white">{{ weather }}</span>
       </div>
     </div>
