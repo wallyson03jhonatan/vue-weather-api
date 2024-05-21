@@ -22,3 +22,6 @@
 • Vue router   
 • Composable   
 • Services on fetch openweathermap API
+
+### 🛠️ Deploy on Vercel
+• https://vue-weather-api.vercel.app
