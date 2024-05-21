@@ -57,7 +57,6 @@ async function onSubmit() {
     <button type="submit" class="px-2 flex items-center justify-center" title="Pesquisar">
       <Search stroke-width="3" color="#e4e4e7" :size="16" />
     </button>
-
   </form>
 
   <form v-else class="relative w-full h-20" @submit.prevent="onSubmit">
@@ -71,7 +70,7 @@ async function onSubmit() {
     </button>
   </form>
 
-  <span class="absolute left-12 -bottom-6 text-sm text-red-700 font-semibold" v-if="error">Cidade não foi
-    encontrada</span>
-
+  <span class="md:absolute md:left-12 text-sm text-red-700 font-semibold" v-if="error">
+    Cidade não foi encontrada
+  </span>
 </template>
