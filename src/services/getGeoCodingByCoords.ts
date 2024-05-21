@@ -26,7 +26,7 @@ export default async function getGeoCodingByCoords(): Promise<Coordinates> {
     const { lat, lon }: any = await coords;
     
     const response = await fetch(
-      `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&appid=${appID}`
+      `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&appid=${appID}`
     )
       .then((response) => response.json())
       
