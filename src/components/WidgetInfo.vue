@@ -3,6 +3,7 @@ import { computed } from "vue";
 import { useMobileStore } from "@/stores/mobile";
 import { useWeatherStore } from "@/stores/weather";
 import { weatherInEnglish } from "@/composables/utils";
+
 import DateTime from "@/components/DateTime.vue";
 
 const store = useWeatherStore();
@@ -40,20 +41,18 @@ const icon = computed(() => {
 </script>
 
 <template>
-  <div v-if="mobileStore.$state.isMobile" class="relative flex flex-col mt-8 items-center justify-center">
+  <div v-if="mobileStore.$state.isMobile" class="relative flex flex-col sm:mt-8 mt-4 items-center justify-center">
 
-    <span class="text-2xl text-white font-semibold">{{ city }}</span>
+    <span class="sm:text-2xl text-xl text-white font-semibold">{{ city }}</span>
 
-    <img :src="icon" alt="Icon" class="absolute top-4">
-
-    <div class="mt-20 flex items-end">
-      <span class="text-7xl text-white font-semibold" v-show="temperature">
+    <div class="mt-4 flex items-end">
+      <span class="text-5xl sm:text-7xl text-white font-semibold" v-show="temperature">
         {{ temperature }}
       </span>
-      <span class="text-5xl text-white font-thin">°C</span>
+      <span class="text-3xl sm:text-5xl text-white font-thin">°C</span>
     </div>
 
-    <span class="mt-2 text-lg text-white font-semibold">{{ weather }}</span>
+    <span class="mt-2 text-base sm:text-lg text-white font-semibold">{{ weather }}</span>
     <DateTime />
 
   </div>

@@ -2,6 +2,7 @@
 import { computed } from "vue";
 import { useWeatherStore } from "@/stores/weather";
 import { weatherInEnglish } from "@/composables/utils";
+
 import LoadingCard from "@/layout/LoadingCard.vue";
 import WidgetInfo from "@/components/WidgetInfo.vue";
 import WeatherDetails from "@/components/WeatherDetails.vue";
@@ -23,11 +24,9 @@ const loading = computed(() => {
 </script>
 
 <template>
-  <main class="relative flex flex-col max-w-6xl my-20 mx-auto shadow-effect fix-height">
+  <main class="relative flex flex-col max-w-6xl my-10 mx-auto shadow-effect fix-height">
 
-    <template v-if="loading">
-      <LoadingCard v-show="loading" />
-    </template>
+    <LoadingCard v-if="loading" />
 
     <template v-else>
 
@@ -44,7 +43,7 @@ const loading = computed(() => {
           <WeatherDetails />
         </div>
 
-        <span class="text-white text-sm font-bold font-serif text-center mt-16">the.vue.weather</span>
+        <span class="text-white text-sm font-bold font-serif text-center sm:mt-16 mt-8">the.vue.weather</span>
 
       </div>
     </template>

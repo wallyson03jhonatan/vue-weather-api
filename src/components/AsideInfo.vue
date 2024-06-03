@@ -9,7 +9,7 @@ const store = useWeatherStore()
 </script>
 
 <template>
-  <div class="absolute right-0 glass-effect h-full w-2/5">
+  <div class="absolute right-0 glass-effect h-full overflow-y-auto w-2/5">
 
     <div class="max-h-1/2">
       <LocationForm />
