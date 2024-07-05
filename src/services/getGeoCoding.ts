@@ -10,8 +10,6 @@ export default async function getGeoCoding({ city }: getGeoCodingInterface) {
       `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${appID}`
     )
       .then((response) => response.json())
-      console.log(response);
-      
 
     return response
   } catch (error) {
